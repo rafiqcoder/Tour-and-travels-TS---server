@@ -1,0 +1,61 @@
+Entities:
+
+Locations
+Review
+Booking
+
+
+User {
+    name:"Rahul",
+    email: "e@gmail.com",
+    review : [
+        {
+            review: "good",
+            rating: 4.5,
+        },
+        {
+            review: "good",
+            rating: 4.5,
+        },
+    ]
+
+    booking:[
+        {
+        tourName:"dhaka to coxbazar",
+        }
+    ]
+}
+
+Tour
+{
+    locations : [
+        {
+            area: "ST. Martin"
+        }
+    ]
+}
+
+Booking {
+    id: 1,
+    tourName: "daka to cox bazar",
+
+
+
+
+
+
+
+
+Embedding vs Referencing
+Referencing:
+
+Relation of Database:
+1. One to one = user:Order
+2. One to Many
+
+// Only for mongo db
+    a. One to Few: User : [ Order1, Order2, Order3]
+    b. One to Many: User : [ Comment1, Comment2, Comment3... 300]
+    c. One to Tons : user: chat ["hi, helo, ...1000]
+    
+
