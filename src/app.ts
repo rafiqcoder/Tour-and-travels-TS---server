@@ -1,10 +1,11 @@
-import express, { Request, Response } from 'express'
-const app = express()
+import express, { Application } from 'express'
+import { userRoutes } from './routes/user.route'
+import cors from 'cors'
 
+const app:Application = express()
+app.use(express.json())
+app.use(cors())
 
-app.get('/api/v1/users', (req:Request, res:Response) => {
-  res.status(200).json({ message: 'Hello world' })
-})
-
+app.get('/api/v1/users', userRoutes)
 
 export default app
