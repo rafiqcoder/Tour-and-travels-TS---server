@@ -7,3 +7,5 @@ interface Ibooking {
     createdAt: Date;
     paid: boolean;
 }
+
+export {Ibooking};

@@ -6,6 +6,8 @@ import { userServices } from '../services/user.service'
 const createUser = async (req: Request, res: Response) => {
   try {
     const userData = req.body
+    console.log(userData);
+    
     const result = await userServices.createUser(userData)
     res.status(201).json({
       message: 'User created successfully',
@@ -23,8 +25,10 @@ const createUser = async (req: Request, res: Response) => {
 const getAlluser = async (req: Request, res: Response) => {
   try {
     const result = await userServices.getAlluser()
+    console.log(result);
+    
     res.status(201).json({
-      message: 'User created successfully',
+      message: 'got users',
       data: result,
     })
   } catch (error: any) {
