@@ -1,6 +1,9 @@
+import { Model } from "mongoose";
+
+/* eslint-disable @typescript-eslint/ban-types */
 interface Itour {
     name: string;
-    duration: number;
+    durationHours: number;
     ratingAverage: number;
     ratingQuantity: number;
     price: number;
@@ -13,4 +16,12 @@ interface Itour {
     slug: string;
 }
 
-export {Itour};
+interface ITourMethods {
+    getNextNearestDateAndEndDate(): {
+        nearestStartDate: Date | null;
+        estimatedEndDate: Date | null;
+    }
+}
+type TTourModel = Model<Itour, {},ITourMethods>;
+
+export {Itour, ITourMethods, TTourModel};

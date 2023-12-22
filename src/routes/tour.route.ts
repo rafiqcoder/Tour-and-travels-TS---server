@@ -3,10 +3,9 @@ import { tourController } from '../controllers/tour.controller'
 
 const router = express.Router()
 
-router.route('/').get(tourController.getAllTour).post(tourController.createTour)
+router.route('/').post(tourController.createTour).get(tourController.getAllTour)
 router
-    .route('/:id')
-    
+  .route('/:id')
   .get(tourController.getSingleTour)
   .patch(tourController.updateTour)
   .delete(tourController.deleteTour)

@@ -1,5 +1,5 @@
-import { Ibooking } from "../interfaces/booking.interface"
-import Booking from "../models/booking.model"
+import { Ibooking } from '../interfaces/booking.interface'
+import Booking from '../models/booking.model'
 
 const createBooking = async (bookingData: Ibooking): Promise<Ibooking> => {
   const result = await Booking.create(bookingData)

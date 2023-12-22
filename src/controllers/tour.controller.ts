@@ -62,7 +62,7 @@ const updateTour = async (req: Request, res: Response) => {
     const id = req.params.id
     const result = await tourServices.updateTour(id, tourData)
     res.status(201).json({
-      message: 'Tour created successfully',
+      message: 'Tour updated successfully',
       data: result,
     })
   } catch (error: any) {
